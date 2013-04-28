@@ -32,7 +32,8 @@ public class CryptoLib {
 			state[1] = 32;
 			state[2] = 16;
 			rounds(16); //do 16 initialization rounds
-			//convert the input to integers (makes logical operations easier), then pad it as described in the algorithm
+			//convert the input to integers (makes logical operations easier), then pad it 
+			//as described in the algorithm
 			//first, compute size of input[]
 			int inputSize = message.length;
 			inputSize++; //for the 1-byte padding specified in the algorithm

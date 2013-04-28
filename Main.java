@@ -258,7 +258,8 @@ public class Main {
 		//first, read it..
 		in.read(currData);
 		//..decrypt it..
-		currData = CryptoLib.RC4.doRC4(keyPieces[currPiece], CryptoLib.TEA.doUnTEA(keyPieces[currPiece], currData));
+		currData = CryptoLib.RC4.doRC4(keyPieces[currPiece], 
+				CryptoLib.TEA.doUnTEA(keyPieces[currPiece], currData));
 		//..then write it to the file
 		out.write(currData, 0, (8 - numPad));
 				
